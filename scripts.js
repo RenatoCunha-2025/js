@@ -11,7 +11,7 @@ function convertValues() {
     const euroToday = 6.1
     const libraToday = 7.29
     const bitcoinToday = 98.142
-    
+
     if (currencySelect.value == "dolar") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
@@ -26,33 +26,33 @@ function convertValues() {
 
         }).format(inputCurrencyValue / euroToday)
     }
-    if(currencySelect.value == "bit") {
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("es-sv", {
-        style: "currency",
-        currency: "BTC"
-    }).format(inputCurrencyValue / bitcoinToday)
+    if (currencySelect.value == "bit") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("es-sv", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue / bitcoinToday)
 
-}
+    }
 
-if(currencySelect.value == "libra"){
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-gb", {
-        style: "currency",
-        currency: "GBP"
-    }).format(inputCurrencyValue / libraToday)
-    
-}
-    
-    
-currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+    if (currencySelect.value == "libra") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-UK", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / libraToday)
+
+    }
+
+
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL"
     }).format(inputCurrencyValue)
 
-   
+
 
 
     console.log(inputCurrencyValue)
-    
+
 }
 function changeCurrency() {
 
@@ -69,21 +69,21 @@ function changeCurrency() {
     if (currencySelect.value == "euro") {
 
         currencyName.innerHTML = "Euro"
-        currencyImage.src ="./assets/euro.png"
+        currencyImage.src = "./assets/euro.png"
 
     }
 
     if (currencySelect.value == "libra") {
 
         currencyName.innerHTML = "libra"
-        currencyImage.src ="./assets/libra.png"
+        currencyImage.src = "./assets/libra.png"
 
     }
 
     if (currencySelect.value == "bit") {
 
         currencyName.innerHTML = "Bitcoin"
-        currencyImage.src ="./assets/bitcoin.png"
+        currencyImage.src = "./assets/bitcoin.png"
 
     }
     convertValues()
