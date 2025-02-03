@@ -7,12 +7,12 @@
 }
 
 body {
-    background-color: #8a51fc;
+    background: linear-gradient(blue,yellow);
 
 }
 
 .logo {
-    width: 300px;
+    width: 200px;
     display: block;
     margin: 20px auto;
 }
@@ -20,7 +20,7 @@ body {
 main {
 
     width: 375px;
-    background: #f4f4f4;
+    background: #ffffff;
     border-radius: 20px;
     margin: 0 auto;
     padding: 44px 24px 23px;
@@ -28,9 +28,10 @@ main {
 }
 
 label {
-    color: #f4f4f4;
+    color: #050505;
     font-weight: 400;
     font-size: 14px;
+    
 
 
 }
@@ -40,7 +41,7 @@ input {
 
     background: #FFFFFF;
     border: 1px solid #BBBBBB;
-    border-radius: 4px;
+    border-radius: 10px;
     height: 48px;
     width: 100%;
     margin-bottom: 24px;
@@ -54,7 +55,7 @@ input {
 
 button {
 
-    background: #772fd3;
+    background: #0110dd;
     border-radius: 5px;
     width: 100%;
     border: none;
@@ -74,8 +75,8 @@ button:active {
 }
 
 section {
-    border: 1px solid #772fd3;
-    border-radius: 20px;
+    border: 1px solid #7f02e6;
+    border-radius: 5px;
     margin-top: 36px;
     padding: 12px;
     display: flex;
@@ -85,6 +86,7 @@ section {
 
 .arrow-img {
     margin: 15px 0;
+    
 }
 
 .currency-box {

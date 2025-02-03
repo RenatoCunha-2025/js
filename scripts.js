@@ -32,14 +32,16 @@ function convertValues() {
         }).format(inputCurrencyValue / euroToday)
     }
 
-
     if (currencySelect.value == "libra") {
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-gb", {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-UK", {
             style: "currency",
             currency: "GBP"
-        }).format(inputCurrencyValue / libraToday)
 
+        }).format(inputCurrencyValue / euroToday)
     }
+
+
+    
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
