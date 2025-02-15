@@ -13,7 +13,7 @@ function convertValues() {
 
     const dolarToday = 5.82
     const euroToday = 6.1
-    const libraToday = 7.29
+    const libraToday = 7.17
    
 
 
@@ -37,7 +37,7 @@ function convertValues() {
             style: "currency",
             currency: "GBP"
 
-        }).format(inputCurrencyValue / euroToday)
+        }).format(inputCurrencyValue / libraToday)
     }
 
 
@@ -49,7 +49,7 @@ function convertValues() {
     }).format(inputCurrencyValue)
 
 
-    console.log(inputCurrencyValue)
+  
 
 }
 function changeCurrency() {
