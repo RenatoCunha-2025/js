@@ -2,20 +2,22 @@ const convertButton = document.querySelector(".convert-button")
 const currencySelect = document.querySelector(".currency-select")
 
 
-function convertValues() {
+
+
+
+const convertValues = async () => {
 
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")
     const currencyValueConverted = document.querySelector(".currency-value")
 
-    console.log(currencySelect.value)
 
-
-    const dolarToday = 5.82
-    const euroToday = 6.1
-    const libraToday = 7.17
-   
-
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+    const dolarToday = data.USDBRL.high
+    const euroToday = data.EURBRL.high
+    
+    const bitcoinToday = data.BTCBRL.high
+    console.log(data)
 
     if (currencySelect.value == "dolar") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -32,16 +34,16 @@ function convertValues() {
         }).format(inputCurrencyValue / euroToday)
     }
 
-    if (currencySelect.value == "libra") {
+ 
+
+    if (currencySelect.value == "bitcoin") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-UK", {
             style: "currency",
-            currency: "GBP"
+            currency: "BTC"
 
-        }).format(inputCurrencyValue / libraToday)
+        }).format(inputCurrencyValue / bitcoinToday)
     }
 
-
-    
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -49,7 +51,7 @@ function convertValues() {
     }).format(inputCurrencyValue)
 
 
-  
+
 
 }
 function changeCurrency() {
@@ -71,10 +73,12 @@ function changeCurrency() {
 
     }
 
-    if (currencySelect.value == "libra") {
+   
 
-        currencyName.innerHTML = "libra"
-        currencyImage.src = "./assets/libra.png"
+    if (currencySelect.value == "bitcoin") {
+
+        currencyName.innerHTML = "bitcoin"
+        currencyImage.src = "./assets/bitcoin.png"
 
     }
 
